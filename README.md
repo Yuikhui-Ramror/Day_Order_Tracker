@@ -43,8 +43,4 @@ The focus is on **correct logic first**, not heavy UI or extra features.
 - Simple admin portal to update holidays
 - Student view to check today’s schedule
 - Clean and modular project structure
-
 ---
-
-## Project Structure
-
