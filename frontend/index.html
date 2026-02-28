@@ -1,1 +1,30 @@
 <!DOCTYPE html>
+<html>
+<head>
+  <title>Day Order Tracker</title>
+</head>
+<body>
+
+<h1 id="title">Loading...</h1>
+<p id="date"></p>
+
+<script>
+fetch("/api/today")
+  .then(res => res.json())
+  .then(data => {
+
+    document.getElementById("date").textContent =
+        "Date: " + data.date;
+
+    if (!data.working_day) {
+        document.getElementById("title").textContent =
+            "Non-Working Day";
+    } else {
+        document.getElementById("title").textContent =
+            "Day " + data.day_order;
+    }
+});
+</script>
+
+</body>
+</html>
