@@ -4,11 +4,11 @@ from datetime import date
 import json
 import datetime
 
-from logic import get_day_order
+from backend.logic import get_day_order
 
 app = FastAPI()
 
-app.mount("/", StaticFiles(directory="../frontend", html=True), name="frontend")
+app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")
 
 
 def load_data():
